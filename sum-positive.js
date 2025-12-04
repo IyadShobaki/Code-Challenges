@@ -1,4 +1,4 @@
-// Codewars
+// Codewars  Sum positive
 
 const arr = [1, -2, 3, 4, 5]; // 13
 
@@ -9,7 +9,7 @@ function positiveSum(arr) {
 //console.log(positiveSum(arr));
 
 // HackerRank Bitwise Operators
-function getMaxLessThank(n, k) {
+function getMaxLessThanK(n, k) {
   let max = 0;
   for (let a = n; a > 1; a--) {
     for (let b = a - 1; b > 0; b--) {
@@ -21,4 +21,24 @@ function getMaxLessThank(n, k) {
   return max;
 }
 
-console.log(getMaxLessThank(5, 2));
+console.log(getMaxLessThanK(5, 2));
+
+// HackerRank Dates
+
+function getDayName(dateString) {
+  const daysArray = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  const date = new Date(dateString);
+  const dayNumber = date.getDay();
+  return daysArray[dayNumber];
+}
+
+console.log(getDayName("10/11/2009"));

@@ -1,6 +1,6 @@
 "use strict";
 
-// Codewars
+// Codewars  Sum positive
 var arr = [1, -2, 3, 4, 5]; // 13
 
 function positiveSum(arr) {
@@ -13,7 +13,7 @@ function positiveSum(arr) {
 // HackerRank Bitwise Operators
 
 
-function getMaxLessThank(n, k) {
+function getMaxLessThanK(n, k) {
   var max = 0;
 
   for (var a = n; a > 1; a--) {
@@ -27,4 +27,13 @@ function getMaxLessThank(n, k) {
   return max;
 }
 
-console.log(getMaxLessThank(5, 2));
+console.log(getMaxLessThanK(5, 2)); // HackerRank Dates
+
+function getDayName(dateString) {
+  var daysArray = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  var date = new Date(dateString);
+  var dayNumber = date.getDay();
+  return daysArray[dayNumber];
+}
+
+console.log(getDayName("10/11/2009"));
