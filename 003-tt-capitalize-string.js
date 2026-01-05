@@ -1,12 +1,17 @@
 function capitalize(str) {
+  //improve code:
+  return str
+    .split(" ")
+    .map((word) => word[0].toUpperCase() + word.slice(1))
+    .join(" ");
   // write your code here
-  const splitArr = str.split(" ");
-  const result = splitArr.map((element) => {
-    const newWord = element[0].toUpperCase() + element.slice(1);
-    return newWord;
-  });
+  //   const splitArr = str.split(" ");
+  //   const result = splitArr.map((element) => {
+  //     const newWord = element[0].toUpperCase() + element.slice(1);
+  //     return newWord;
+  //   });
 
-  return result.join(" ");
+  //   return result.join(" ");
 }
 console.log(capitalize("Bob Marley poet and a prophet")); // Bob Marley Poet And A Prophet
 console.log(capitalize("Bob Marley taught me how to off it")); // Bob Marley Taught Me How To Off It
