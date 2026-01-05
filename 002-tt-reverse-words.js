@@ -1,5 +1,8 @@
 function reverseWords(str) {
-  // wrtie your code here
+  // Improve code
+  return str.split(" ").reverse().join(" ");
+  // return str.reverse();
+  /*  // wrtie your code here
   if (!str || str.length === 0) return "Empty or undefined string";
   // split into array by empty space
   const array = str.split(" ");
@@ -9,7 +12,7 @@ function reverseWords(str) {
     newArray[k] = array[i];
     k++;
   }
-  return newArray.join(" ");
+  return newArray.join(" "); */
 }
 
 console.log(reverseWords("goal your reach to ways of lot a are there")); // "there are a lot of ways to reach your goal"
