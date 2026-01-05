@@ -43,3 +43,25 @@ function getPropertyIyad(obj, path) {
 }
 getPropertyIyad(object, "one"); // 1
 getPropertyIyad(object, "two.three"); // 3
+
+// Process of solving with the inteviewer
+// ---  Ask questions  --- examples:
+// "But what if there is no property at the end of your specified path?
+// What should the function return in that case?"
+
+// Write Pseudocode:
+
+/* function getProperty(obj, path) {
+  split the path into an array and save the result in the arr variable
+
+    define the res variable and assign obj to it
+
+  for (iterate over the array from the first element to the last) {
+    pick an array element
+    get the property from the res variable by key
+    save the retrieved property in the res variable
+    start all over again
+  }
+
+  return res
+} */
