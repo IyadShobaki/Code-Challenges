@@ -7,7 +7,19 @@ const object = {
   four: 4,
 };
 
-// Next step: Analysing and
+// Next step: make your code more elegant if possible
+function getProperty(obj, path) {
+  return path.split(".").reduce(function (res, key) {
+    if (res === undefined || res === null) {
+      console.log("There is no such property");
+      return undefined;
+    }
+
+    return res[key];
+  }, obj);
+}
+
+/* // Next step: Analysing and
 function getProperty(obj, path) {
   const arr = path.split(".");
 
@@ -22,7 +34,7 @@ function getProperty(obj, path) {
   }
 
   return res;
-}
+} */
 
 console.log(getProperty(object, "five"));
 console.log(getProperty(object, "five.six"));
