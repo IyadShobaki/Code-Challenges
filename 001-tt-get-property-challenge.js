@@ -1,6 +1,33 @@
 //Tripleten whiteboard practice
+const object = {
+  one: 1,
+  two: {
+    three: 3,
+  },
+  four: 4,
+};
 
+// Next step: Analysing and
 function getProperty(obj, path) {
+  const arr = path.split(".");
+
+  let res = obj;
+
+  for (let i = 0; i < arr.length; i += 1) {
+    if (res === undefined || res === null) {
+      console.log("There is no such property");
+      return undefined;
+    }
+    res = res[arr[i]];
+  }
+
+  return res;
+}
+
+console.log(getProperty(object, "five"));
+console.log(getProperty(object, "five.six"));
+
+/* function getProperty(obj, path) {
   // Tripleten suggested solution
   // split the path into an array and save the result in the arr variable
   const arr = path.split(".");
@@ -15,15 +42,7 @@ function getProperty(obj, path) {
   }
 
   return res;
-}
-
-const object = {
-  one: 1,
-  two: {
-    three: 3,
-  },
-  four: 4,
-};
+} */
 
 ///
 console.log(getProperty(object, "one")); // 1
